@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="content">
+        <div class="titulo">
+            <h1>Login</h1>
+        </div>
+        <form>
+            <label for="email">Usuário</label>
+            <input type="email" name="email" id="email" [(ngModel)]="usuario.userName" #ctrl="ngModel" required>
+
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" [(ngModel)]="usuario.password" #ctrl="ngModel" required>
+
+            <button type="button" class="btn" (click)="login()">Entrar</button>
+        </form>
+        <p *ngIf="usuarioOuSenhaInvalido" >Usuário ou Senha Inválidos</p>
+    </div>
+</div>
